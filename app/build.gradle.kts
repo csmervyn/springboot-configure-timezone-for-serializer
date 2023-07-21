@@ -10,6 +10,7 @@ plugins {
     application
     checkstyle
     id("com.github.spotbugs") version "5.0.14"
+    id("org.owasp.dependencycheck") version "8.3.1"
 }
 
 repositories {
