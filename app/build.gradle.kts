@@ -9,6 +9,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
     checkstyle
+    id("com.github.spotbugs") version "5.0.14"
 }
 
 repositories {
@@ -51,5 +52,13 @@ tasks.withType<Checkstyle>().configureEach {
         xml.required.set(false)
         html.required.set(true)
         //html.stylesheet = resources.text.fromFile("config/xsl/checkstyle-custom.xsl")
+    }
+}
+
+tasks.spotbugsMain {
+    reports.create("html") {
+        required.set(true)
+        outputLocation.set(file("$buildDir/reports/spotbugs.html"))
+        setStylesheet("fancy-hist.xsl")
     }
 }
