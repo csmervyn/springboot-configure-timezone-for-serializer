@@ -3,6 +3,7 @@
 - checkstyle
 - spotbugs
 - dependencycheck
+- pmd
 
 ## checkstyle
 本地运行 checkstyle 检查
@@ -50,4 +51,23 @@ dependency-check-report 报告所在位置:
 ### reference
 [Gradle dependencycheck plugin](https://plugins.gradle.org/plugin/org.owasp.dependencycheck)
 [Dependencycheck documention](http://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html)
+
+## pmd
+本地运行 pmd 的检查
+```shell
+./gradlew clean check
+```
+上面的命令在运行时，在命令行检查 pmd 和生成 pmd 报告。
+生产代码 pmd 报告所在位置:
+```shell
+{项目 root directory}/app/build/reports/pmd/main.html
+```
+test 代码 pmd 报告所在位置:
+```shell
+{项目 root directory}/app/build/reports/pmd/test.html
+```
+### reference
+[Guide pmd plugin](https://docs.gradle.org/current/userguide/pmd_plugin.html)
+
+
 

@@ -11,6 +11,7 @@ plugins {
     checkstyle
     id("com.github.spotbugs") version "5.0.14"
     id("org.owasp.dependencycheck") version "8.3.1"
+    pmd
 }
 
 repositories {
@@ -62,4 +63,11 @@ tasks.spotbugsMain {
         outputLocation.set(file("$buildDir/reports/spotbugs.html"))
         setStylesheet("fancy-hist.xsl")
     }
+}
+
+pmd {
+    isConsoleOutput = true
+    toolVersion = "6.55.0"
+    rulesMinimumPriority.set(5)
+    ruleSets = listOf("category/java/errorprone.xml", "category/java/bestpractices.xml")
 }
