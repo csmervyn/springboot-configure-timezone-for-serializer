@@ -4,6 +4,7 @@
 - spotbugs
 - dependencycheck
 - pmd
+- gitleaks
 
 ## checkstyle
 本地运行 checkstyle 检查
@@ -68,6 +69,20 @@ test 代码 pmd 报告所在位置:
 ```
 ### reference
 [Guide pmd plugin](https://docs.gradle.org/current/userguide/pmd_plugin.html)
+
+## gitleaks
+首先需要安装 git hook 脚步：
+```shell
+pre-commit install
+```
+测试 gitleaks 是否生效：
+```shell
+pre-commit run --all-files
+```
+### reference
+[pre-commit document](https://pre-commit.com/)
+[hooks of pre-commit](https://pre-commit.com/hooks.html)
+[github gitleaks](https://github.com/gitleaks/gitleaks)
 
 
 
