@@ -1,4 +1,8 @@
 # gradle-java-project-template
+Language: Java
+Test framework: Junit 5
+Build Tool: Gradle
+
 集成的组件有：
 - checkstyle
 - spotbugs
