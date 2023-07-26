@@ -4,15 +4,40 @@
 
 package com.mervyn.learn.gradle;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+@ExtendWith(MockitoExtension.class)
 class AppTest {
+    @Captor
+    ArgumentCaptor<String> loggerMessageCaptor;
+
     @Test
     void appHasGreeting() {
+        Logger logger = mock(Logger.class);
+        try (MockedStatic<LoggerFactory> mockLoggerFactory = Mockito.mockStatic(LoggerFactory.class)) {
+            // given
+            mockLoggerFactory.when(() -> LoggerFactory.getLogger(App.class))
+                    .thenReturn(logger);
 
-        Assertions.assertTrue(true);
-       // todo
+            // when
+            App.main(any());
 
+            // then
+            verify(logger).info(loggerMessageCaptor.capture());
+            assertThat(loggerMessageCaptor.getValue()).isEqualTo("Hello World!");
+        }
     }
 }

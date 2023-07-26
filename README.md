@@ -5,6 +5,7 @@
 - dependencycheck
 - pmd
 - gitleaks
+- jacoco
 
 ## checkstyle
 本地运行 checkstyle 检查
@@ -84,5 +85,23 @@ pre-commit run --all-files
 [hooks of pre-commit](https://pre-commit.com/hooks.html)
 [github gitleaks](https://github.com/gitleaks/gitleaks)
 
-
+## Jacoco
+本地运行 jacoco 生成报告的命令：
+```shell
+./gradlew clean build
+# or
+./gradlew clean jacocoTestReport
+```
+jacoco 报告所在位置:
+```shell
+{项目 root directory}/app/build/jacocoHtml/index.html
+```
+本地运行 jacoco 检查报告的命令：
+```shell
+./gradlew clean build
+# or
+./gradlew clean jacocoTestCoverageVerification
+```
+### reference
+[Gradle jacoco](https://docs.gradle.org/current/userguide/jacoco_plugin.html)
 

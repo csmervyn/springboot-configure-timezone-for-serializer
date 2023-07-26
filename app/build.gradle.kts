@@ -12,6 +12,7 @@ plugins {
     id("com.github.spotbugs") version "5.0.14"
     id("org.owasp.dependencycheck") version "8.3.1"
     pmd
+    jacoco
 }
 
 repositories {
@@ -33,6 +34,12 @@ dependencies {
 
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     testImplementation("ch.qos.logback:logback-classic:1.4.8")
+
+    // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+    testImplementation("org.mockito:mockito-junit-jupiter:5.4.0")
+
+    // https://mvnrepository.com/artifact/org.assertj/assertj-core
+    testImplementation("org.assertj:assertj-core:3.24.2")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -76,4 +83,47 @@ pmd {
     toolVersion = "6.55.0"
     rulesMinimumPriority.set(5)
     ruleSets = listOf("category/java/errorprone.xml", "category/java/bestpractices.xml")
+}
+
+tasks.test {
+    finalizedBy(tasks.jacocoTestReport) // report is always generated after tests run
+    finalizedBy(tasks.jacocoTestCoverageVerification)
+}
+tasks.jacocoTestReport {
+    dependsOn(tasks.test) // tests are required to run before generating the report
+}
+tasks.jacocoTestCoverageVerification {
+    dependsOn(tasks.test)
+    violationRules {
+        rule {
+            limit {
+                minimum = "0.7".toBigDecimal()
+            }
+        }
+
+        rule {
+            isEnabled = false
+            element = "CLASS"
+            includes = listOf("org.gradle.*")
+
+            limit {
+                counter = "LINE"
+                value = "TOTALCOUNT"
+                maximum = "0.9".toBigDecimal()
+            }
+        }
+    }
+}
+
+jacoco {
+    toolVersion = "0.8.9"
+    reportsDirectory.set(layout.buildDirectory.dir("customJacocoReportDir"))
+}
+
+tasks.jacocoTestReport {
+    reports {
+        xml.required.set(false)
+        csv.required.set(false)
+        html.outputLocation.set(layout.buildDirectory.dir("jacocoHtml"))
+    }
 }
