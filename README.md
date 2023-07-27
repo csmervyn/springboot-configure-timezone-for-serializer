@@ -8,6 +8,12 @@ Java project template build by gradle. Default integration some useful plugin.
 ## Prerequisites
 - JDK 17
 - Gradle
+
+## Build in local
+```shell
+./gradlew clean build
+```
+
 ## Framework we use
 Language: Java
 Test framework: Junit 5
@@ -37,8 +43,8 @@ test 代码 checkstyle 报告所在位置:
 {项目 root directory}/app/build/reports/checkstyle/test.html
 ```
 #### reference
-[The Checkstyle Plugin](https://docs.gradle.org/current/userguide/checkstyle_plugin.html#sec:checkstyle_configuration)
-[release list of checkstyle](https://checkstyle.sourceforge.io/releasenotes.html)
+- [The Checkstyle Plugin](https://docs.gradle.org/current/userguide/checkstyle_plugin.html#sec:checkstyle_configuration)
+- [release list of checkstyle](https://checkstyle.sourceforge.io/releasenotes.html)
 
 ### spotbugs
 本地运行 spotbugs 检查
@@ -51,8 +57,8 @@ spotbugs 报告所在位置:
 {项目 root directory}/app/build/reports/spotbugs.html
 ```
 #### reference
-[spotbugs-gradle-plugin Github](https://github.com/spotbugs/spotbugs-gradle-plugin)
-[Gradle plugin portal](https://plugins.gradle.org/plugin/com.github.spotbugs)
+- [spotbugs-gradle-plugin Github](https://github.com/spotbugs/spotbugs-gradle-plugin)
+- [Gradle plugin portal](https://plugins.gradle.org/plugin/com.github.spotbugs)
 
 ### dependencycheck
 本地运行 dependencycheck 的检查
@@ -66,8 +72,8 @@ dependency-check-report 报告所在位置:
 ```
 
 #### reference
-[Gradle dependencycheck plugin](https://plugins.gradle.org/plugin/org.owasp.dependencycheck)
-[Dependencycheck documention](http://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html)
+- [Gradle dependencycheck plugin](https://plugins.gradle.org/plugin/org.owasp.dependencycheck)
+- [Dependencycheck documention](http://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html)
 
 ### pmd
 本地运行 pmd 的检查
@@ -84,7 +90,7 @@ test 代码 pmd 报告所在位置:
 {项目 root directory}/app/build/reports/pmd/test.html
 ```
 #### reference
-[Guide pmd plugin](https://docs.gradle.org/current/userguide/pmd_plugin.html)
+- [Guide pmd plugin](https://docs.gradle.org/current/userguide/pmd_plugin.html)
 
 ### gitleaks
 首先需要安装 git hook 脚步：
@@ -96,9 +102,9 @@ pre-commit install
 pre-commit run --all-files
 ```
 #### reference
-[pre-commit document](https://pre-commit.com/)
-[hooks of pre-commit](https://pre-commit.com/hooks.html)
-[github gitleaks](https://github.com/gitleaks/gitleaks)
+- [pre-commit document](https://pre-commit.com/)
+- [hooks of pre-commit](https://pre-commit.com/hooks.html)
+- [github gitleaks](https://github.com/gitleaks/gitleaks)
 
 ### Jacoco
 本地运行 jacoco 生成报告的命令：
@@ -118,5 +124,5 @@ jacoco 报告所在位置:
 ./gradlew clean jacocoTestCoverageVerification
 ```
 #### reference
-[Gradle jacoco](https://docs.gradle.org/current/userguide/jacoco_plugin.html)
+- [Gradle jacoco](https://docs.gradle.org/current/userguide/jacoco_plugin.html)
 
