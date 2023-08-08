@@ -15,9 +15,10 @@ Java project template build by gradle. Default integration some useful plugin.
 ```
 
 ## Framework we use
-Language: Java
-Test framework: Junit 5
-Build Tool: Gradle
+- Language: Java
+- Test framework: Junit 5
+- Build Tool: Gradle
+- Mock framework: Mockito
 
 ## Plugins we integrate
 
