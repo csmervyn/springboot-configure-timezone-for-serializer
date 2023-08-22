@@ -36,7 +36,7 @@ dependencies {
     testImplementation("ch.qos.logback:logback-classic:1.4.11")
 
     // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
-    testImplementation("org.mockito:mockito-junit-jupiter:5.4.0")
+    testImplementation("org.mockito:mockito-junit-jupiter:5.5.0")
 
     // https://mvnrepository.com/artifact/org.assertj/assertj-core
     testImplementation("org.assertj:assertj-core:3.24.2")
