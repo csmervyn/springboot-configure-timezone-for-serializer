@@ -51,7 +51,7 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.assertj/assertj-core
     testImplementation("org.assertj:assertj-core:3.24.2")
-    testImplementation("org.hamcrest:hamcrest-core:1.3")
+    testImplementation("org.hamcrest:hamcrest-core:2.2")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
