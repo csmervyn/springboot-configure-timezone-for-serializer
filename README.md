@@ -25,6 +25,7 @@ Java project template build by gradle. Default integration some useful plugin.
 - Test framework: Junit 5
 - Build Tool: Gradle
 - Mock framework: Mockito
+- Assert framework: Hamcrest
 
 ## Plugins we integrate
 
@@ -34,6 +35,10 @@ Java project template build by gradle. Default integration some useful plugin.
 - pmd
 - gitleaks
 - jacoco
+
+## Utils we use
+- mapStruct
+- lombok
 
 ### checkstyle
 
@@ -173,3 +178,10 @@ jacoco 报告所在位置:
 #### reference
 
 - [Gradle jacoco](https://docs.gradle.org/current/userguide/jacoco_plugin.html)
+
+## MapStruct
+
+#### reference
+- [MapStruct](https://mapstruct.org/)
+- [MapStruct installation](https://mapstruct.org/documentation/installation/)
+
