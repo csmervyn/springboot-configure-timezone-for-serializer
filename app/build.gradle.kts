@@ -22,35 +22,19 @@ repositories {
 
 dependencies {
     implementation("org.projectlombok:lombok:1.18.28")
-    // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
-
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-
-    // This dependency is used by the application.
     implementation("com.google.guava:guava:32.1.2-jre")
-
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
     implementation("org.slf4j:slf4j-api:2.0.9")
-
     implementation ("org.mapstruct:mapstruct:1.5.5.Final")
     implementation("org.projectlombok:lombok-mapstruct-binding:0.2.0")
-
     annotationProcessor ("org.projectlombok:lombok-mapstruct-binding:0.2.0")
-
     compileOnly("org.projectlombok:lombok:1.18.28")
-
     annotationProcessor ("org.mapstruct:mapstruct-processor:1.5.5.Final")
     annotationProcessor ("org.projectlombok:lombok:1.18.28")
 
-    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("ch.qos.logback:logback-classic:1.4.11")
-
-    // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
     testImplementation("org.mockito:mockito-junit-jupiter:5.5.0")
-
-    // https://mvnrepository.com/artifact/org.assertj/assertj-core
-    testImplementation("org.assertj:assertj-core:3.24.2")
     testImplementation("org.hamcrest:hamcrest-core:2.2")
 }
 

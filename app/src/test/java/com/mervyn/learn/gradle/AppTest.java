@@ -4,11 +4,12 @@
 
 package com.mervyn.learn.gradle;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
+import org.hamcrest.core.Is;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
@@ -37,7 +38,7 @@ class AppTest {
 
             // then
             verify(logger).info(loggerMessageCaptor.capture());
-            assertThat(loggerMessageCaptor.getValue()).isEqualTo("Hello World!");
+            assertThat(loggerMessageCaptor.getValue(), Is.is("Hello World!"));
         }
     }
 }
