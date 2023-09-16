@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.projectlombok:lombok:1.18.20")
+    implementation("org.projectlombok:lombok:1.18.28")
     // Use JUnit Jupiter for testing.
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
 
