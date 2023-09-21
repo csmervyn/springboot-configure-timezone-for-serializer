@@ -21,15 +21,15 @@ repositories {
 }
 
 dependencies {
-    implementation("org.projectlombok:lombok:1.18.28")
+    implementation("org.projectlombok:lombok:1.18.30")
     implementation("com.google.guava:guava:32.1.2-jre")
     implementation("org.slf4j:slf4j-api:2.0.9")
     implementation ("org.mapstruct:mapstruct:1.5.5.Final")
     implementation("org.projectlombok:lombok-mapstruct-binding:0.2.0")
     annotationProcessor ("org.projectlombok:lombok-mapstruct-binding:0.2.0")
-    compileOnly("org.projectlombok:lombok:1.18.28")
+    compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor ("org.mapstruct:mapstruct-processor:1.5.5.Final")
-    annotationProcessor ("org.projectlombok:lombok:1.18.28")
+    annotationProcessor ("org.projectlombok:lombok:1.18.30")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
