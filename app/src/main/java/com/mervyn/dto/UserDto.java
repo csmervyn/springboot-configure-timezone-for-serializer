@@ -1,18 +1,18 @@
-package com.mervyn.learn.gradle;
+package com.mervyn.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  * @author cs-mervyn
  * @version 1.0
- * @date 2023/9/15 12:26
+ * @date 2023/9/15 12:27
  */
 @AllArgsConstructor
-@NoArgsConstructor
+@Setter
 @Getter
-public class User {
+public class UserDto {
     private String name;
     private Integer age;
 }

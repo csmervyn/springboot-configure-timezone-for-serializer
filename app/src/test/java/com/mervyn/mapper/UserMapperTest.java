@@ -1,7 +1,7 @@
-package com.mervyn.learn.gradle.mapper;
+package com.mervyn.mapper;
 
-import com.mervyn.learn.gradle.User;
-import com.mervyn.learn.gradle.dto.UserDto;
+import com.mervyn.User;
+import com.mervyn.dto.UserDto;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 
