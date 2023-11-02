@@ -13,6 +13,9 @@ plugins {
     id("org.owasp.dependencycheck") version "8.4.2"
     pmd
     jacoco
+    java
+    id("org.springframework.boot") version "3.1.5"
+    id("io.spring.dependency-management") version "1.1.3"
 }
 
 repositories {
@@ -30,12 +33,14 @@ dependencies {
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor ("org.mapstruct:mapstruct-processor:1.5.5.Final")
     annotationProcessor ("org.projectlombok:lombok:1.18.30")
+    implementation("org.springframework.boot:spring-boot-starter-web")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("ch.qos.logback:logback-classic:1.4.11")
     testImplementation("org.mockito:mockito-junit-jupiter:5.6.0")
     testImplementation("org.hamcrest:hamcrest-core:2.2")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -43,6 +48,7 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
+    //sourceCompatibility = JavaVersion.VERSION_17
 }
 
 application {
