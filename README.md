@@ -6,7 +6,7 @@ Java project template build by gradle. Default integration some useful plugin.
 
 ## Build status
 
-![Gradle Build](https://github.com/csmervyn/gradle-java-project-template/actions/workflows/gradle.yml/badge.svg)
+![Gradle Build](https://github.com/csmervyn/springboot-java-project-template/actions/workflows/gradle.yml/badge.svg)
 
 ## Prerequisites
 
