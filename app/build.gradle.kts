@@ -6,8 +6,6 @@
  */
 
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
-    application
     checkstyle
     id("com.github.spotbugs") version "5.2.1"
     id("org.owasp.dependencycheck") version "8.4.2"
@@ -50,11 +48,6 @@ java {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
     //sourceCompatibility = JavaVersion.VERSION_17
-}
-
-application {
-    // Define the main class for the application.
-    mainClass.set("gradle.java.project.template.App")
 }
 
 tasks.named<Test>("test") {
