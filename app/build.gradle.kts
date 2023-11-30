@@ -32,7 +32,7 @@ dependencies {
     annotationProcessor ("org.mapstruct:mapstruct-processor:1.5.5.Final")
     annotationProcessor ("org.projectlombok:lombok:1.18.30")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("com.github.spotbugs:spotbugs-annotations:4.8.1")
+    implementation("com.github.spotbugs:spotbugs-annotations:4.8.2")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
