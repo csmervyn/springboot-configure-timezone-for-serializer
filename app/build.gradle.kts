@@ -7,7 +7,7 @@
 
 plugins {
     checkstyle
-    id("com.github.spotbugs") version "5.2.5"
+    id("com.github.spotbugs") version "6.0.2"
     id("org.owasp.dependencycheck") version "9.0.2"
     pmd
     jacoco
@@ -37,7 +37,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("ch.qos.logback:logback-classic:1.4.11")
-    testImplementation("org.mockito:mockito-junit-jupiter:5.7.0")
+    testImplementation("org.mockito:mockito-junit-jupiter:5.8.0")
     testImplementation("org.hamcrest:hamcrest-core:2.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
