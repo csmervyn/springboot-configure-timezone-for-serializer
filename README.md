@@ -2,7 +2,7 @@
 
 ## Overview
 
-Java project template build by gradle. Default integration some useful plugin.
+Spring boot java project template build by gradle. Default integration some useful plugin.
 
 ## Build status
 
