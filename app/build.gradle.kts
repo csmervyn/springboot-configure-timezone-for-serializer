@@ -8,7 +8,7 @@
 plugins {
     checkstyle
     id("com.github.spotbugs") version "6.0.3"
-    id("org.owasp.dependencycheck") version "9.0.5"
+    id("org.owasp.dependencycheck") version "9.0.6"
     pmd
     jacoco
     java
