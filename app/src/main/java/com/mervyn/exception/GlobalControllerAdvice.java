@@ -4,12 +4,12 @@ import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
 import com.mervyn.enums.ResponseCode;
 import com.mervyn.response.Result;
+import java.util.stream.Collectors;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import java.util.stream.Collectors;
 
 /**
  * @author cs-mervyn
