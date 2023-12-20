@@ -1,5 +1,7 @@
 package com.mervyn.exception;
 
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
+
 import com.mervyn.enums.ResponseCode;
 import com.mervyn.response.Result;
 import org.springframework.validation.BindingResult;
@@ -10,7 +12,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.stream.Collectors;
 
-import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
 /**
  * @author cs-mervyn

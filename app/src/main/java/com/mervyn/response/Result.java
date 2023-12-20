@@ -1,5 +1,6 @@
 package com.mervyn.response;
 
+import static com.mervyn.enums.ResponseCode.SUCCESS;
 
 import com.mervyn.enums.ResponseCode;
 import com.mervyn.exception.BusinessException;
@@ -7,7 +8,6 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.Getter;
 import lombok.Setter;
 
-import static com.mervyn.enums.ResponseCode.SUCCESS;
 
 
 /**
