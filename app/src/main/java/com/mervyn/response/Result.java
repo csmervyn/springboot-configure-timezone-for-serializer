@@ -17,7 +17,8 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@SuppressFBWarnings(value = {"PI_DO_NOT_REUSE_PUBLIC_IDENTIFIERS_CLASS_NAMES"}, justification = "Do not reuse public identifiers from the Java Standard Library")
+@SuppressFBWarnings(value = {"PI_DO_NOT_REUSE_PUBLIC_IDENTIFIERS_CLASS_NAMES"},
+        justification = "Do not reuse public identifiers from the Java Standard Library")
 public class Result<T> {
     /**
      * 状态码

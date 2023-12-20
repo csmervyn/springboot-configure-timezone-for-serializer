@@ -1,11 +1,10 @@
 package com.mervyn.exception;
 
 import com.mervyn.enums.ResponseCode;
+import java.io.Serializable;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.io.Serial;
-import java.io.Serializable;
 
 /**
  * @author cs-mervyn
