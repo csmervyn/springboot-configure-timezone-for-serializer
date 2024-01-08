@@ -23,7 +23,7 @@ repositories {
 
 dependencies {
     implementation("org.projectlombok:lombok:1.18.30")
-    implementation("com.google.guava:guava:32.1.3-jre")
+    implementation("com.google.guava:guava:33.0.0-jre")
     implementation("org.slf4j:slf4j-api:2.0.10")
     implementation ("org.mapstruct:mapstruct:1.5.5.Final")
     implementation("org.projectlombok:lombok-mapstruct-binding:0.2.0")
