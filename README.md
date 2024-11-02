@@ -1,8 +1,8 @@
-# springboot-java-project-template
+# springboot-configure-timezone-for-serializer
 
 ## Overview
 
-Spring boot java project template build by gradle. Default integration some useful plugin.
+This project try to illustrate how to configure timezone for serializer in Spring Boot.
 
 ## Build status
 
