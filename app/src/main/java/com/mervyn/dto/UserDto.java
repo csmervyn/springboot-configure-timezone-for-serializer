@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.ZonedDateTime;
+
 /**
  * @author cs-mervyn
  * @version 1.0
@@ -15,4 +17,5 @@ import lombok.Setter;
 public class UserDto {
     private String name;
     private Integer age;
+    private ZonedDateTime createdDateTime;
 }

@@ -9,6 +9,8 @@ import com.mervyn.dto.UserDto;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 
+import java.time.ZonedDateTime;
+
 
 /**
  * @author cs-mervyn
@@ -20,13 +22,15 @@ class UserMapperTest {
     @Test
     void shouldConvertUserToUserDtoSuccess() {
         UserMapper mapper = Mappers.getMapper(UserMapper.class);
-        User user = new User("cs-mervyn", 18);
+        ZonedDateTime createdDateTime = ZonedDateTime.now();
+        User user = new User("cs-mervyn", 18, createdDateTime);
 
         UserDto userDto = mapper.toUserDto(user);
 
         assertThat(userDto, notNullValue());
         assertThat(userDto.getName(), is("cs-mervyn"));
         assertThat(userDto.getAge(), is(18));
+        assertThat(userDto.getCreatedDateTime(), is(createdDateTime));
     }
 
 }
